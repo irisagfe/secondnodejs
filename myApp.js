@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });
 
-app.get("name", (req, res) => {
+app.get("/name", (req, res) => {
   console.log(req.query.first + " " + req.query.last);
   res.json({"name": req.query.first + " " + req.query.last});
 })
