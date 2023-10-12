@@ -11,7 +11,7 @@ app.use('/json', (req, res) => {
 })
 
 app.use("/public", express.static(__dirname + "/public"))
-console.log(message);
+console.log("Hello json");
 
 
 
