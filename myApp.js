@@ -5,13 +5,14 @@ let app = express();
   res.json({ message : "Hello json" });
 });*/
 
-app.get('/json', (req, res) => {
-  let message = 'Hello json'
-  if (process.env.MESSAGE_STYLE === 'uppercase') {
-    return res.json({"message": message.toUpperCase()})
-  }
-  return res.status(200).json({"message": message})
-})
+app.get(’/json’,function(req,res)
+{
+let message=“Hello json”;
+res.status(200).setHeader(‘Content-Type’, ‘application/json’);
+
+res.json({“message”: message});
+
+});
 //app.use("/public", express.static(__dirname + "/public"))
 //console.log("Hello World");
 
