@@ -5,11 +5,11 @@ let app = express();
   res.json({ message : "Hello json" });
 });*/
 
-app.get("/json", (req, res) => 
-  res.json({
+app.get("/json", (req, res) => {
+  return res.json({
     message: "Hello json"
   });
-);
+});
 //app.use("/public", express.static(__dirname + "/public"))
 //console.log("Hello World");
 
