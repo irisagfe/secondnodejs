@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("name", (req, res) => {
-  res.json({"name": req.query.firstname + " " + req.query.lastname})
+  res.json({"name": req.query.first + " " + req.query.last})
 })
 
 app.get("/:word/echo", (req, res) => {
