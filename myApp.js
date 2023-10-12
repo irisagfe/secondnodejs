@@ -9,11 +9,12 @@ app.use("/", (req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  
   res.sendFile(__dirname + "/views/index.html");
-
-  
 });
+
+app.get("name", (req, res) => {
+  res.json({"name": req.query.firstname + " " + req.query.lastname})
+})
 
 app.get("/:word/echo", (req, res) => {
   res.json({"echo": req.params.word})
