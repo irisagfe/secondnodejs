@@ -20,6 +20,11 @@ app.use('/json', (req, res) => {
    }
 })
 
+app.use("/", (req, res, next) => {
+  console.log(req.method + " " + req.path + "-" + req.ip)
+  next()
+});
+
 app.use("/public", express.static(__dirname + "/public"))
 console.log("Hello json");
 
